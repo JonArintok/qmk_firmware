@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[lyr_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 	[lyr_base] = {
 	  {KC_ESC,        KC_G,          KC_T,         KC_H,            KC_W,            KC_Z,    KC_X,    KC_Y,        KC_O,      KC_U,      KC_J,    KC_BSPC},
 	  {KC_TAB,        KC_D,          KC_L,         KC_R,            KC_S,            KC_P,    KC_K,    KC_E,        KC_A,      KC_I,      KC_N,    KC_ENT},
-	  {MO(lyr_fn),    KC_C,          KC_M,         KC_V,            KC_F,            KC_V,    KC_J,    KC_QUOT,     KC_COMM,   KC_COMM,   KC_SLSH, MO(lyr_arrow)},
+	  {MO(lyr_fn),    KC_C,          KC_M,         KC_B,            KC_F,            KC_V,    KC_J,    KC_QUOT,     KC_COMM,   KC_DOT,    KC_SLSH, MO(lyr_arrow)},
 	  {TG(lyr_mouse), KC_LGUI,       KC_LALT,      KC_LCTL,         KC_LSFT,         KC_SPC,  KC_SPC,  MO(lyr_num), KC_RCTL,   KC_RALT,   KC_VOLD, KC_VOLU}
 	},
 	[lyr_num] = {
