@@ -10,7 +10,7 @@ and add the relevant [keycodes](#mapping-mouse-actions-to-keyboard-keys) to your
 
 #### Enable Mousekeys
 
-To enable the mousekey functionality, add the following line to your keymap's `Makefile`:
+To enable the mousekey functionality, add the following line to your keymap's `rules.mk`:
 
 ```
 MOUSEKEY_ENABLE = yes
