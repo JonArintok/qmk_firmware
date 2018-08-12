@@ -1,5 +1,4 @@
 #include "planck.h"
-#include "rgblight.h"
 
 #define ______ KC_TRNS
 #define XXXXXX KC_NO
@@ -44,12 +43,17 @@ const uint16_t PROGMEM keymaps[lyr_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 		{XXXXXX,    XXXXXX,    XXXXXX,          XXXXXX,          XXXXXX,       KC_LCTL, KC_LALT, ______,     KC_LGUI, XXXXXX,  XXXXXX,  XXXXXX}
 	},
 };
-void matrix_init_user(void) {
-	rgblight_mode(1);
-	rgblight_setrgb(20, 40, 200);
-	rgblight_setrgb_at(0, 0, 0, 42);
+void rgb_matrix_indicators_user(void) {
+  for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
+    rgb_matrix_set_color(i, 20, 40, 200);
+  }
+  rgb_matrix_set_color(42, 0, 0, 0);
 }
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	if (!process_record_dynamic_macro(keycode, record)) return false;
   return true;
 }
+
+
+
