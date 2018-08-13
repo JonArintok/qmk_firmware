@@ -37,18 +37,22 @@ const uint16_t PROGMEM keymaps[lyr_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 		{XXXXXX,    XXXXXX,    KC_GRV,          KC_AT,           ______,       KC_LCTL, KC_LALT, XXXXXX,     KC_LGUI, XXXXXX,  XXXXXX,  XXXXXX}
 	},
 	[lyr_fn] = {
-		{XXXXXX,    XXXXXX,    DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, XXXXXX,       XXXXXX,  KC_PSCR, KC_F1,      KC_F2,   KC_F3,   KC_F4,   KC_DEL},
-		{XXXXXX,    XXXXXX,    XXXXXX,          XXXXXX,          XXXXXX,       XXXXXX,  KC_PGUP, KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_CAPS},
-		{KC_LSFT,   XXXXXX,    DYN_REC_START2,  DYN_REC_START1,  DYN_REC_STOP, XXXXXX,  KC_PGDN, KC_F9,      KC_F10,  KC_F11,  KC_F12,  KC_RSFT},
+		{XXXXXX,    XXXXXX,    DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, RGB_HUD,      RGB_HUI, KC_PSCR, KC_F1,      KC_F2,   KC_F3,   KC_F4,   KC_DEL},
+		{XXXXXX,    XXXXXX,    RGB_MOD,         RGB_TOG,         RGB_SAD,      RGB_SAI, KC_PGUP, KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_CAPS},
+		{KC_LSFT,   DYN_REC_STOP,DYN_REC_START2,DYN_REC_START1,  RGB_VAD,      RGB_VAI, KC_PGDN, KC_F9,      KC_F10,  KC_F11,  KC_F12,  KC_RSFT},
 		{XXXXXX,    XXXXXX,    XXXXXX,          XXXXXX,          XXXXXX,       KC_LCTL, KC_LALT, ______,     KC_LGUI, XXXXXX,  XXXXXX,  XXXXXX}
 	},
 };
+
 void rgb_matrix_indicators_user(void) {
+	/*
   for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
     rgb_matrix_set_color(i, 20, 40, 200);
   }
+  */
   rgb_matrix_set_color(42, 0, 0, 0);
 }
+
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	if (!process_record_dynamic_macro(keycode, record)) return false;
